@@ -1,0 +1,19 @@
+{
+	"name": "sharp-images",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "node ./bin/www"
+	},
+	"dependencies": {
+		"express": "*",
+		"debug": "*",
+		"body-parser": "*",
+		"cookie-parser": "*",
+		"morgan": "*",
+		"serve-favicon": "*",
+		"debug": "*",
+		"jade": "*",
+		"sharp": "*"
+	}
+}

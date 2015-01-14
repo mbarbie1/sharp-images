@@ -1,0 +1,17 @@
+nav.navbar.navbar-default(role="navigation")
+	.navbar-header
+		button.navbar-toggle(type="button",data-toggle="collapse",data-target="#main_site_nav")
+			span.sr-only Toggle navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		a.navbar-brand(href="/")
+			| Home
+
+	.collapse.navbar-collapse#main_site_nav
+		ul.nav.navbar-nav
+			li.pull-right
+				a(href="/registerByEmail") Register-by-email
+			li.pull-right
+				a(href="/login") Login
+
