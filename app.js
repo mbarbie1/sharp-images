@@ -38,24 +38,49 @@ var port = app.get('port');
 
 
 
-	app.use('/', function(req, res) {
-		res.render('index', { title: 'Testing sharp images library' })
-	});
 
 	/* IIIF image server */
-	router.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', function(req, res) {
+	app.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', function(req, res) {
+/*		console
+		var region, size, rotation, quality, format;
+
+		var tifFormats = function tifFormats(format) {
+			if (format == 'tif' || format == 'lsm' || format == 'flex')
+			return 'tif';
+		}
+		var getRegion = function getRegion(region) {
+			if (region == 'full') {
+				return null;
+			} else if {
+				return Number(region.split());
+			} else {
+				return ;
+			}
+		}*/
 		console.log(req.params);
 
-		response.writeHead(200, {'Content-Type': 'image/webp'});
-		sharp('input.jpg').rotate().resize(200).webp().pipe(response);
-		var img = 	'todo';
-		res.send();
+		var p = req.params;
+		var inputImage = p.identifier;
+
+		//res.writeHead(200, {'Content-Type': 'image/png'});
+		sharp(inputImage).png().pipe(res);
+		
+		//res.render('imageGET', { message: JSON.stringify(req.params) } );
+
+		//region = p.region.split
+		
+		//if size == full
+		//sharp(inputImage+tif).rotate(Number(p.rotation)).resize().webp().pipe(response);
+				
 		//{scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}
 		//For example:
 		//	http://www.example.org/image-service/abcd1234/full/full/0/default.jpg
 	});
 
-	
+	app.use('/', function(req, res) {
+		res.render('index', { title: 'Testing sharp images library' })
+	});
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////     ERROR HANDLING      //////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
