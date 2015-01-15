@@ -93,15 +93,15 @@
 				},
 				{
 					"@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
-					"@id": "http://libimages.princeton.edu/loris/pudl0001%2F4609321%2Fs42%2F00000004.jp2",
+					"@id": "/iiif-image/test.png",
 					"formats": [ "jpg", "png", "gif" ],
-					"height": 3600,
+					"height": 24,
 					"profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
 					"qualities": [ "native", "bitonal", "grey", "color" ],
-					"scale_factors": [ 1, 2, 4, 8, 16 ],
-					"tile_height": 256,
-					"tile_width": 256,
-					"width": 2617
+					"scale_factors": [ 1, 2, 4, 8 ],
+					"tile_height": 6,
+					"tile_width": 6,
+					"width": 24
 				}
 			]
 		});

@@ -36,8 +36,8 @@ var port = app.get('port');
 //////////////////////////////         ROUTES           /////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
+	var imageViewer = require('./routes/imageViewer');
+	app.use('/view', imageViewer);
 
 	/* IIIF image server */
 	app.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', function(req, res) {

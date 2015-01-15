@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 });
 
 /* IIIF image server */
-router.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', function(req, res) {
+/* router.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', function(req, res) {
 	console.log(req.params);
 
 	var img = 	'todo';
@@ -20,6 +20,6 @@ router.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', f
 	//For example:
 	//	http://www.example.org/image-service/abcd1234/full/full/0/default.jpg
 });
-
+ */
 
 module.exports = router;
