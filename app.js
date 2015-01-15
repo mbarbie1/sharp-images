@@ -7,6 +7,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var querystring = require('querystring');
+// Require sharp
+// var sharp = require('sharp');
 
 var app = express();
 
@@ -35,10 +37,23 @@ var port = app.get('port');
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
 	app.use('/', function(req, res) {
-		res.render('index', { title: 'Hello, World!' })
+		res.render('index', { title: 'Testing sharp images library' })
 	});
 
+	/* IIIF image server */
+	router.get('/iiif-image/:identifier/:region/:size/:rotation/:quality.:format', function(req, res) {
+		console.log(req.params);
+
+		response.writeHead(200, {'Content-Type': 'image/webp'});
+		sharp('input.jpg').rotate().resize(200).webp().pipe(response);
+		var img = 	'todo';
+		res.send();
+		//{scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}
+		//For example:
+		//	http://www.example.org/image-service/abcd1234/full/full/0/default.jpg
+	});
 
 	
 /////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -3,10 +3,9 @@ var router = express.Router();
 var path = require('path'); 
 
 router.get('/', function(req, res) { 
-	res.render("users/imageViewer_node.jade", {
+	res.render("imageViewer_node.jade", {
 			nonavbar: true,
 			title: "Image Viewing",
-			user: {'username': req.user.username},
 			images: {'file': 'todo: '}
 	}); 
 });
