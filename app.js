@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var querystring = require('querystring');
 // Require sharp
-// var sharp = require('sharp');
+var sharp = require('sharp');
 
 var app = express();
 
@@ -36,7 +36,14 @@ var port = app.get('port');
 //////////////////////////////         ROUTES           /////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	var imageViewer = require('./routes/imageViewer');
+
+	app.use(express.static(path.join(__dirname,'/public')));
+	app.use('/public',express.static(path.join(__dirname,'/public')));
+	app.use('/scripts',express.static(path.join(__dirname,'/public/scripts')));
+	app.use('/styles',express.static(path.join(__dirname,'/public/styles')));
+	app.use('/view',express.static(path.join(__dirname,'/public/scripts')));
+
+	var imageViewer = require('./routes/imageViewer')
 	app.use('/view', imageViewer);
 
 	/* IIIF image server */
