@@ -71,6 +71,8 @@ var port = app.get('port');
 
 		//res.writeHead(200, {'Content-Type': 'image/png'});
 		sharp(inputImage).png().pipe(res);
+		if p.region == 'full' p.size
+
 		
 		//res.render('imageGET', { message: JSON.stringify(req.params) } );
 

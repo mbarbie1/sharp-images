@@ -1,4 +1,3 @@
-#!/usr/bin/env nodejs
 var debug = require('debug')('fwm');
 var app = require('../app');
 
