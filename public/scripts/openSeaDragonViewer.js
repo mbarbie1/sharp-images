@@ -102,6 +102,30 @@
 					"tile_height": 6,
 					"tile_width": 6,
 					"width": 24
+				},
+				{
+					"@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+					"@id": "/iiif-image/mario.png",
+					"formats": [ "jpg", "png", "gif" ],
+					"height": 1854,
+					"profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+					"qualities": [ "native", "bitonal", "grey", "color" ],
+					"scale_factors": [ 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32, 64 ],
+					"tile_height": 256,
+					"tile_width": 256,
+					"width": 1473
+				},
+				{
+					"@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+					"@id": "/iiif-image/mario.tif",
+					"formats": [ "jpg", "png", "gif" ],
+					"height": 1854,
+					"profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+					"qualities": [ "native", "bitonal", "grey", "color" ],
+					"scale_factors": [ 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32, 64 ],
+					"tile_height": 256,
+					"tile_width": 256,
+					"width": 1473
 				}
 			]
 		});
