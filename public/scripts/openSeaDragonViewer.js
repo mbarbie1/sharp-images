@@ -117,15 +117,15 @@
 				},
 				{
 					"@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
-					"@id": "/iiif-image/mario.tif",
+					"@id": "/iiif-image/tif16.tif",
 					"formats": [ "jpg", "png", "gif" ],
-					"height": 1854,
+					"height": 512,
 					"profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
 					"qualities": [ "native", "bitonal", "grey", "color" ],
-					"scale_factors": [ 1/16, 1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32, 64 ],
+					"scale_factors": [ 1.0/128.0, 1.0/64.0, 1.0/32.0, 1.0/16.0, 1.0/8.0, 1.0/4.0, 1.0/2.0, 1, 2, 4, 8, 16, 32, 64 ],
 					"tile_height": 256,
 					"tile_width": 256,
-					"width": 1473
+					"width": 512
 				}
 			]
 		});
